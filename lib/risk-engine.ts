@@ -1,3 +1,5 @@
+import type { LoanApplication } from './loan-domain'
+
 export type RiskInput = {
   crop: string
   farmArea: number
@@ -36,6 +38,28 @@ export type RiskResult = {
   coverageRatio: number
   projectedSurplus: number
   drivers: RiskDriver[]
+}
+
+export function riskInputFromApplication(application: Pick<LoanApplication, 'crop' | 'farmAreaHa' | 'irrigation' | 'historicalYield' | 'creditHistory' | 'existingDebt' | 'requestedAmount'>): RiskInput {
+  return {
+    crop: application.crop,
+    farmArea: application.farmAreaHa,
+    irrigation: application.irrigation as RiskInput['irrigation'],
+    historicalYield: application.historicalYield,
+    yieldVolatility: application.creditHistory === 'Strong' ? 8 : application.creditHistory === 'Past delays' ? 28 : 18,
+    creditHistory: application.creditHistory as RiskInput['creditHistory'],
+    existingDebt: application.existingDebt,
+    loanAmount: application.requestedAmount,
+    annualRate: 11.5,
+    repayment: 'Harvest-linked',
+    rainfallAnomaly: 0,
+    heatStress: 3,
+    soilMoisture: 50,
+    ndvi: 0.65,
+    forecastRainfall: 0,
+    marketPriceChange: 0,
+    harvestDelay: 0,
+  }
 }
 
 const cropPrices: Record<string, number> = {
