@@ -1,0 +1,2 @@
+-- Production seed placeholder. The local demo seed is data/loan-store.json.
+-- All local records are synthetic and must not be treated as bank data.
