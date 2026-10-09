@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import './water-resources.css'
 
 export const metadata: Metadata = {
   title: 'AgriRisk Intelligence | Climate-Aware Lending',
