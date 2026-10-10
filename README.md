@@ -47,7 +47,16 @@ The shared sign-in page supports `Farmer` and `Bank Officer` accounts. Registrat
 - Application records support state/district/village, land reference, optional Google Maps coordinates/link, sowing and harvest dates, repayment structure, and shared farmer/officer status updates. Missing coordinates are surfaced as unavailable rather than inferred.
 - All portal APIs require the HTTP-only local session cookie. Passwords are stored as salted scrypt hashes.
 - Bank officer overview metrics, pipeline counts, climate exposure, and review rows are derived from the local application/facility store through `/api/dashboard`; they are not a second hard-coded dataset.
-- The local JSON store is intended for this hackathon demo. Use PostgreSQL plus a managed session store before production deployment.
+- When `DATABASE_URL` is configured, the app uses Neon/Postgres with a transactionally locked JSONB aggregate in `agririsk_store`. On first connection it seeds the aggregate from `data/loan-store.json`; later requests do not write to the deployed filesystem. Without `DATABASE_URL`, local development keeps using the JSON fallback.
+
+### Vercel + Neon deployment
+
+1. Create a Neon project and copy its pooled connection string, including `sslmode=require`.
+2. In Vercel project settings, add `DATABASE_URL`, `SESSION_SECRET`, and optionally `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` for Production, Preview, and Development environments.
+3. Deploy with `pnpm build` and `vercel --prod`.
+4. The first authenticated request creates `agririsk_store` and seeds the demo aggregate. For a controlled migration, run the `CREATE TABLE` statement in `db/schema.sql` first.
+
+Vercel's filesystem is read-only. On Vercel, uploaded files are written only to `/tmp` to avoid filesystem errors; `/tmp` is ephemeral. Use Vercel Blob or another object store before treating document uploads as durable production records.
 
 ## Demo acceptance walkthrough
 

@@ -1,5 +1,13 @@
 -- PostgreSQL migration blueprint for production deployment.
 -- The runnable hackathon environment uses data/loan-store.json and the same domain invariants.
+CREATE TABLE IF NOT EXISTS agririsk_store (
+  id SMALLINT PRIMARY KEY CHECK (id = 1),
+  payload JSONB NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- The application initializes this table from data/loan-store.json on first connection.
+-- The normalized tables below are a future reporting/migration blueprint.
 CREATE TABLE loan_facilities (
   id TEXT PRIMARY KEY,
   reference TEXT NOT NULL UNIQUE,

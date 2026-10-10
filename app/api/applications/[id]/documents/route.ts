@@ -24,7 +24,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const application = (store.applications || []).find(item => item.id === id && item.userId === user.id)
     if (!application) throw new Error('Application was not found.')
     const storageName = `${randomUUID()}${path.extname(file.name).toLowerCase() || '.bin'}`
-    const uploadDirectory = path.join(process.cwd(), 'data', 'uploads')
+    const uploadDirectory = process.env.VERCEL ? path.join('/tmp', 'agririsk-uploads') : path.join(process.cwd(), 'data', 'uploads')
     await mkdir(uploadDirectory, { recursive: true })
     await writeFile(path.join(uploadDirectory, storageName), Buffer.from(await file.arrayBuffer()), { flag: 'wx' })
     let document

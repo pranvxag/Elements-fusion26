@@ -25,7 +25,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     if (!facility || !tranche) throw new Error('Tranche was not found for this farmer.')
     if (tranche.status !== 'Planned' && tranche.status !== 'Pending Review') throw new Error('Evidence can be submitted for the next planned milestone or a tranche already under review.')
     const storageName = `${randomUUID()}${path.extname(file.name).toLowerCase() || '.bin'}`
-    const uploadDirectory = path.join(process.cwd(), 'data', 'uploads')
+    const uploadDirectory = process.env.VERCEL ? path.join('/tmp', 'agririsk-uploads') : path.join(process.cwd(), 'data', 'uploads')
     await mkdir(uploadDirectory, { recursive: true })
     await writeFile(path.join(uploadDirectory, storageName), Buffer.from(await file.arrayBuffer()), { flag: 'wx' })
     await updateLoanStore(current => {
