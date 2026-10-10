@@ -23,7 +23,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const facility = store.facilities.find(item => item.farmerUserId === user.id && item.tranches.some(tranche => tranche.id === id))
     const tranche = facility?.tranches.find(item => item.id === id)
     if (!facility || !tranche) throw new Error('Tranche was not found for this farmer.')
-    if (tranche.status !== 'Disbursed') throw new Error('Evidence can be submitted after the tranche is disbursed.')
+    if (tranche.status !== 'Planned' && tranche.status !== 'Pending Review') throw new Error('Evidence can be submitted for the next planned milestone or a tranche already under review.')
     const storageName = `${randomUUID()}${path.extname(file.name).toLowerCase() || '.bin'}`
     const uploadDirectory = path.join(process.cwd(), 'data', 'uploads')
     await mkdir(uploadDirectory, { recursive: true })
@@ -38,6 +38,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       evidence.proofFileName = file.name.replace(/[\\/]/g, '_')
       evidence.proofStorageName = storageName
       currentTranche.reviewObservation = 'Crop-progress evidence submitted by farmer.'
+      if (currentTranche.status === 'Planned') currentTranche.status = 'Pending Review'
       current.audit.push({ id: `audit-${randomUUID()}`, actor: user.name, role: 'Farmer', action: 'Crop evidence uploaded', entityType: 'Tranche', entityId: id, reason: evidence.label, occurredAt: new Date().toISOString() })
     })
     return Response.json({ ok: true, fileName: file.name })
