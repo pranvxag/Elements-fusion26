@@ -401,6 +401,218 @@
         }
       ],
       "farmerUserId": "demo-farmer"
+    },
+    {
+      "id": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+      "reference": "ARI-FAC-299863",
+      "farmerName": "Pipeline Test Farmer",
+      "district": "Pune",
+      "crop": "Soybean",
+      "farmAreaHa": 2.5,
+      "approvedLimit": 100000,
+      "annualRate": 11.5,
+      "repaymentStructure": "Harvest-linked",
+      "approvedAt": "2026-10-10T04:08:19.863Z",
+      "status": "Active",
+      "tranches": [
+        {
+          "id": "tranche-41cf7938-de56-420a-801b-ff9e276c975e",
+          "facilityId": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+          "sequence": 1,
+          "purpose": "Seeds and sowing",
+          "cropStage": "Sowing",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Pending Review",
+          "evidence": [
+            {
+              "id": "evidence-4f1bd490-9e64-4a96-bc88-f991007171b3",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-0bdc14fb-17f9-4b2e-b19f-221d320aba7a",
+          "facilityId": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+          "sequence": 2,
+          "purpose": "Crop inputs",
+          "cropStage": "Vegetative growth",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-4c0dbac8-039d-44dd-8415-ca10f74e101e",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-d323edeb-dfac-44c0-b0fb-e392cac87347",
+          "facilityId": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+          "sequence": 3,
+          "purpose": "Crop protection",
+          "cropStage": "Flowering",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-8c8e7317-1e36-4650-be72-f9f9432948ab",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-3f7dd68d-2722-4338-8f96-ea8bcfbfde72",
+          "facilityId": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+          "sequence": 4,
+          "purpose": "Irrigation and maintenance",
+          "cropStage": "Canopy development",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-8794ae5c-ed56-47bc-9f48-e4432961988c",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-37b34905-de74-4784-b3d0-357c823d06df",
+          "facilityId": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+          "sequence": 5,
+          "purpose": "Harvest preparation",
+          "cropStage": "Harvest",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-18dfdfae-a912-495e-bf34-333039cff6e9",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        }
+      ],
+      "farmerUserId": "demo-farmer"
+    },
+    {
+      "id": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+      "reference": "ARI-FAC-337729",
+      "farmerName": "Pipeline Test Farmer 2",
+      "district": "Pune",
+      "crop": "Soybean",
+      "farmAreaHa": 2.5,
+      "approvedLimit": 100000,
+      "annualRate": 11.5,
+      "repaymentStructure": "Harvest-linked",
+      "approvedAt": "2026-10-10T04:08:57.729Z",
+      "status": "Active",
+      "tranches": [
+        {
+          "id": "tranche-6b17970a-96fe-4e61-b29c-950812cead1f",
+          "facilityId": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+          "sequence": 1,
+          "purpose": "Seeds and sowing",
+          "cropStage": "Sowing",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Pending Review",
+          "evidence": [
+            {
+              "id": "evidence-fd00b4d4-eef1-4ab7-8925-dda10dfa557a",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-d365486a-d1c4-4b9e-906e-14c997307323",
+          "facilityId": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+          "sequence": 2,
+          "purpose": "Crop inputs",
+          "cropStage": "Vegetative growth",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-a1aae8d6-4338-43d8-8aed-487aeef957b7",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-6099ec68-a928-4824-8e25-859656fe421a",
+          "facilityId": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+          "sequence": 3,
+          "purpose": "Crop protection",
+          "cropStage": "Flowering",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-4fa17793-568e-4c0d-bc58-b0dd15e2b082",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-5aedd8a4-08a5-4cef-a90a-bb1bd9a3858f",
+          "facilityId": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+          "sequence": 4,
+          "purpose": "Irrigation and maintenance",
+          "cropStage": "Canopy development",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-25e79e2f-fae6-4c0a-8d38-b7f01aeaca6f",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        },
+        {
+          "id": "tranche-d74a6815-61ce-499d-b9cb-efa1b3f373cd",
+          "facilityId": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+          "sequence": 5,
+          "purpose": "Harvest preparation",
+          "cropStage": "Harvest",
+          "amount": 20000,
+          "plannedDate": "2026-10-10",
+          "status": "Planned",
+          "evidence": [
+            {
+              "id": "evidence-e45a0e94-86b7-49b6-9d11-994592ef911d",
+              "label": "Crop-progress photo",
+              "required": true,
+              "received": false
+            }
+          ]
+        }
+      ],
+      "farmerUserId": "demo-farmer"
     }
   ],
   "disbursements": [
@@ -504,6 +716,66 @@
       "entityId": "application-4ea39174-2244-46b2-957e-6290d1d648c6",
       "reason": "Approved with staged disbursement.",
       "occurredAt": "2026-10-09T14:26:47.339Z"
+    },
+    {
+      "id": "audit-4bf5d2a0-1fc4-4a40-8086-3a664f6c3590",
+      "actor": "Priya Farmer",
+      "role": "Farmer",
+      "action": "Application submitted",
+      "entityType": "Application",
+      "entityId": "application-9fe97f3b-8755-47d4-a904-54d305aae0c3",
+      "reason": "Submitted through farmer portal",
+      "occurredAt": "2026-10-10T04:08:11.457Z"
+    },
+    {
+      "id": "audit-02d58ad5-0838-47b3-8c6a-8f40327fb85c",
+      "actor": "Arun Kulkarni",
+      "role": "Bank Officer",
+      "action": "AgriRisk assessment generated",
+      "entityType": "Application",
+      "entityId": "application-9fe97f3b-8755-47d4-a904-54d305aae0c3",
+      "reason": "Calculation version agririsk-demo-1.0",
+      "occurredAt": "2026-10-10T04:08:19.817Z"
+    },
+    {
+      "id": "audit-502c72e8-728a-41fd-a36b-a83b5f417a42",
+      "actor": "Arun Kulkarni",
+      "role": "Bank Officer",
+      "action": "Application approve",
+      "entityType": "Application",
+      "entityId": "application-9fe97f3b-8755-47d4-a904-54d305aae0c3",
+      "reason": "Pipeline test approval after officer review.",
+      "occurredAt": "2026-10-10T04:08:19.863Z"
+    },
+    {
+      "id": "audit-d5f00a4a-9f4b-4301-86d1-6aa9294d90f5",
+      "actor": "Priya Farmer",
+      "role": "Farmer",
+      "action": "Application submitted",
+      "entityType": "Application",
+      "entityId": "application-aea4ba94-9f45-42c7-91de-d083f57f24cc",
+      "reason": "Submitted through farmer portal",
+      "occurredAt": "2026-10-10T04:08:57.624Z"
+    },
+    {
+      "id": "audit-49469517-e478-474a-b7cd-31ddcc169edd",
+      "actor": "Arun Kulkarni",
+      "role": "Bank Officer",
+      "action": "AgriRisk assessment generated",
+      "entityType": "Application",
+      "entityId": "application-aea4ba94-9f45-42c7-91de-d083f57f24cc",
+      "reason": "Calculation version agririsk-demo-1.0",
+      "occurredAt": "2026-10-10T04:08:57.677Z"
+    },
+    {
+      "id": "audit-96cb2755-c461-46b5-9924-8aa8ee350a39",
+      "actor": "Arun Kulkarni",
+      "role": "Bank Officer",
+      "action": "Application approve",
+      "entityType": "Application",
+      "entityId": "application-aea4ba94-9f45-42c7-91de-d083f57f24cc",
+      "reason": "Approved with staged disbursement.",
+      "occurredAt": "2026-10-10T04:08:57.729Z"
     }
   ],
   "users": [
@@ -568,49 +840,24 @@
   ],
   "sessions": [
     {
-      "id": "dabf1a50f2fa143b6a733fe306cb4232c1026d0f4ee0eb4a00f706b705f6aaec",
-      "userId": "user-51522e60-06e1-4107-8cfc-53a1947ef46e",
-      "expiresAt": "2026-10-09T22:23:44.491Z"
-    },
-    {
-      "id": "d0827e17ea34fa6cbffcca021328078447f2fd85ffb18cae77df7d38dba34702",
-      "userId": "user-dba62d09-b0b8-4e25-b2d8-e67e35f4963d",
-      "expiresAt": "2026-10-09T22:23:44.732Z"
-    },
-    {
-      "id": "35f6ba621c9a9fbaeb4c18d20dee970a69eb0a675aa4a8b281e535d473bf721b",
-      "userId": "user-611129f6-c9c8-4524-9784-8d5d1ba5361c",
-      "expiresAt": "2026-10-09T22:26:46.998Z"
-    },
-    {
-      "id": "8e4001da5de89a13c76614ddd677264ec88ede5968652612933a936f9d096f2a",
-      "userId": "user-35acbfb5-e45b-44cb-ba0a-aad14b86f0a7",
-      "expiresAt": "2026-10-09T22:26:47.143Z"
-    },
-    {
-      "id": "1d84fb1f21141bd599061abd7de3ecb099187598f2dc7208bfcba665afb05cbc",
-      "userId": "demo-farmer",
-      "expiresAt": "2026-10-09T22:44:29.138Z"
-    },
-    {
-      "id": "3feba3d41c00818411fba7eb539a61b7b8120115adf895219007ed912871598d",
-      "userId": "demo-officer",
-      "expiresAt": "2026-10-09T22:44:29.266Z"
-    },
-    {
-      "id": "cd5682ec0a8282dee2773a474ad18f17c63f882a217af8b076a078ab722541ce",
-      "userId": "demo-farmer",
-      "expiresAt": "2026-10-09T22:45:29.894Z"
-    },
-    {
       "id": "0b998a2afccc47d2fd34910cbd0d2bbada91508aa32b248309297a410450a6d0",
       "userId": "demo-officer",
       "expiresAt": "2026-10-10T05:25:08.649Z"
     },
     {
-      "id": "5c7127b67752220dcebfc3e705142cf9b2dd270832ef3d0bc3f6fb38b678982b",
+      "id": "24150421c815ad9052b99caeabacc6297cb5f76bc2a8cef82aec0e71d5c5ca37",
+      "userId": "demo-farmer",
+      "expiresAt": "2026-10-10T12:06:29.271Z"
+    },
+    {
+      "id": "92de0e96d66884ddd44ab2c41c2b404f633acae11cacb957365eb1018768c16a",
+      "userId": "demo-farmer",
+      "expiresAt": "2026-10-10T12:08:11.437Z"
+    },
+    {
+      "id": "976e15fcc026e72496c298fca26e0ae1d02ed7f67c052fb1b381da7cee356e2a",
       "userId": "demo-officer",
-      "expiresAt": "2026-10-10T05:43:28.636Z"
+      "expiresAt": "2026-10-10T12:08:19.768Z"
     }
   ],
   "applications": [
@@ -688,6 +935,346 @@
       "officerNote": "Synthetic judge demo facility approved with milestone-based release.",
       "createdAt": "2026-06-01T09:00:00.000Z",
       "updatedAt": "2026-06-15T09:00:00.000Z"
+    },
+    {
+      "id": "application-9fe97f3b-8755-47d4-a904-54d305aae0c3",
+      "reference": "ARI-APP-291458",
+      "userId": "demo-farmer",
+      "status": "Approved",
+      "farmerName": "Pipeline Test Farmer",
+      "phone": "+919811223344",
+      "state": "Maharashtra",
+      "taluka": "Haveli",
+      "district": "Pune",
+      "village": "Wakad",
+      "crop": "Soybean",
+      "farmAreaHa": 2.5,
+      "cultivatedAreaHa": 2.2,
+      "irrigation": "Drip",
+      "sowingDate": "2026-06-15",
+      "expectedHarvestDate": "2026-10-15",
+      "latitude": 18.5204,
+      "longitude": 73.8567,
+      "mapsLink": "https://maps.google.com/?q=18.5204,73.8567",
+      "surveyReference": "SUR-PIPE-001",
+      "historicalYield": 24,
+      "expectedYield": 24,
+      "requestedAmount": 100000,
+      "expectedRevenue": 360000,
+      "cultivationCosts": 150000,
+      "existingDebt": 10000,
+      "creditHistory": "Strong",
+      "repaymentStructure": "Harvest-linked",
+      "purpose": "Seasonal crop cultivation",
+      "documents": [],
+      "createdAt": "2026-10-10T04:08:11.457Z",
+      "updatedAt": "2026-10-10T04:08:19.863Z",
+      "assessment": {
+        "version": "agririsk-demo-1.0",
+        "assessedAt": "2026-10-10T04:08:19.817Z",
+        "assessedBy": "Arun Kulkarni",
+        "inputSnapshot": {
+          "id": "application-9fe97f3b-8755-47d4-a904-54d305aae0c3",
+          "reference": "ARI-APP-291458",
+          "userId": "demo-farmer",
+          "status": "Submitted",
+          "farmerName": "Pipeline Test Farmer",
+          "phone": "+919811223344",
+          "state": "Maharashtra",
+          "taluka": "Haveli",
+          "district": "Pune",
+          "village": "Wakad",
+          "crop": "Soybean",
+          "farmAreaHa": 2.5,
+          "cultivatedAreaHa": 2.2,
+          "irrigation": "Drip",
+          "sowingDate": "2026-06-15",
+          "expectedHarvestDate": "2026-10-15",
+          "latitude": 18.5204,
+          "longitude": 73.8567,
+          "mapsLink": "https://maps.google.com/?q=18.5204,73.8567",
+          "surveyReference": "SUR-PIPE-001",
+          "historicalYield": 24,
+          "expectedYield": 24,
+          "requestedAmount": 100000,
+          "expectedRevenue": 360000,
+          "cultivationCosts": 150000,
+          "existingDebt": 10000,
+          "creditHistory": "Strong",
+          "repaymentStructure": "Harvest-linked",
+          "purpose": "Seasonal crop cultivation",
+          "documents": [],
+          "createdAt": "2026-10-10T04:08:11.457Z",
+          "updatedAt": "2026-10-10T04:08:11.457Z"
+        },
+        "result": {
+          "repaymentProbability": 93,
+          "baseProbability": 88,
+          "climateImpact": -4,
+          "riskCategory": "Low",
+          "expectedYield": 23.12,
+          "expectedRevenue": 277440,
+          "totalDebt": 121500,
+          "coverageRatio": 2.2834567901234566,
+          "projectedSurplus": 22508,
+          "drivers": [
+            {
+              "label": "Credit history",
+              "detail": "Strong repayment profile",
+              "impact": 14,
+              "direction": "protection"
+            },
+            {
+              "label": "Irrigation resilience",
+              "detail": "Drip irrigation",
+              "impact": 12,
+              "direction": "protection"
+            }
+          ]
+        },
+        "dataSources": [
+          {
+            "name": "Application and financial details",
+            "kind": "observed",
+            "status": "Provided by farmer; officer verification required"
+          },
+          {
+            "name": "Crop duration and price assumptions",
+            "kind": "estimated",
+            "status": "Demo crop library assumption"
+          },
+          {
+            "name": "Weather, soil moisture and crop health",
+            "kind": "synthetic",
+            "status": "Seeded demo indicators; not a satellite observation"
+          },
+          {
+            "name": "Farm coordinates",
+            "kind": "observed",
+            "status": "Provided coordinates; not independently verified"
+          }
+        ],
+        "assumptions": [
+          "Synthetic climate indicators are illustrative and not statistically validated probabilities of default.",
+          "Nearby water resources are not treated as proof of irrigation access.",
+          "Expected revenue uses the seeded crop price library and reported yield."
+        ],
+        "warnings": [
+          "No land or identity document has been uploaded for officer verification."
+        ],
+        "suggestedLoanAmount": 41104,
+        "mapAnalysis": {
+          "status": "synthetic",
+          "nearestResource": "Synthetic village pond marker",
+          "distanceKm": 2.08,
+          "confidence": "low",
+          "freshness": "Seeded demo geospatial data; not a verified map resource"
+        },
+        "timeline": [
+          {
+            "stage": "Sowing",
+            "date": "2026-06-15",
+            "kind": "configured",
+            "detail": "Crop establishment and input purchase"
+          },
+          {
+            "stage": "Vegetative growth",
+            "date": "2026-07-21",
+            "kind": "estimate",
+            "detail": "Crop-progress evidence checkpoint"
+          },
+          {
+            "stage": "Flowering / grain fill",
+            "date": "2026-09-01",
+            "kind": "estimate",
+            "detail": "Irrigation and crop-health checkpoint"
+          },
+          {
+            "stage": "Expected harvest",
+            "date": "2026-10-15",
+            "kind": "configured",
+            "detail": "Expected sale and harvest evidence"
+          },
+          {
+            "stage": "Repayment start",
+            "date": "2026-10-28",
+            "kind": "estimate",
+            "detail": "Harvest-linked repayment schedule begins"
+          }
+        ]
+      },
+      "facilityId": "facility-df51d57d-0cde-45ee-b99a-cd9a7c166bef",
+      "officerNote": "Pipeline test approval after officer review."
+    },
+    {
+      "id": "application-aea4ba94-9f45-42c7-91de-d083f57f24cc",
+      "reference": "ARI-APP-337625",
+      "userId": "demo-farmer",
+      "status": "Approved",
+      "farmerName": "Pipeline Test Farmer 2",
+      "phone": "+919811223355",
+      "state": "Maharashtra",
+      "taluka": "Haveli",
+      "district": "Pune",
+      "village": "Wakad",
+      "crop": "Soybean",
+      "farmAreaHa": 2.5,
+      "cultivatedAreaHa": 2.2,
+      "irrigation": "Drip",
+      "sowingDate": "2026-06-15",
+      "expectedHarvestDate": "2026-10-15",
+      "latitude": 18.5204,
+      "longitude": 73.8567,
+      "mapsLink": "",
+      "surveyReference": "SUR-PIPE-002",
+      "historicalYield": 24,
+      "expectedYield": 24,
+      "requestedAmount": 100000,
+      "expectedRevenue": 360000,
+      "cultivationCosts": 150000,
+      "existingDebt": 10000,
+      "creditHistory": "Strong",
+      "repaymentStructure": "Harvest-linked",
+      "purpose": "Seasonal crop cultivation",
+      "documents": [],
+      "createdAt": "2026-10-10T04:08:57.624Z",
+      "updatedAt": "2026-10-10T04:08:57.729Z",
+      "assessment": {
+        "version": "agririsk-demo-1.0",
+        "assessedAt": "2026-10-10T04:08:57.677Z",
+        "assessedBy": "Arun Kulkarni",
+        "inputSnapshot": {
+          "id": "application-aea4ba94-9f45-42c7-91de-d083f57f24cc",
+          "reference": "ARI-APP-337625",
+          "userId": "demo-farmer",
+          "status": "Submitted",
+          "farmerName": "Pipeline Test Farmer 2",
+          "phone": "+919811223355",
+          "state": "Maharashtra",
+          "taluka": "Haveli",
+          "district": "Pune",
+          "village": "Wakad",
+          "crop": "Soybean",
+          "farmAreaHa": 2.5,
+          "cultivatedAreaHa": 2.2,
+          "irrigation": "Drip",
+          "sowingDate": "2026-06-15",
+          "expectedHarvestDate": "2026-10-15",
+          "latitude": 18.5204,
+          "longitude": 73.8567,
+          "mapsLink": "",
+          "surveyReference": "SUR-PIPE-002",
+          "historicalYield": 24,
+          "expectedYield": 24,
+          "requestedAmount": 100000,
+          "expectedRevenue": 360000,
+          "cultivationCosts": 150000,
+          "existingDebt": 10000,
+          "creditHistory": "Strong",
+          "repaymentStructure": "Harvest-linked",
+          "purpose": "Seasonal crop cultivation",
+          "documents": [],
+          "createdAt": "2026-10-10T04:08:57.624Z",
+          "updatedAt": "2026-10-10T04:08:57.624Z"
+        },
+        "result": {
+          "repaymentProbability": 93,
+          "baseProbability": 88,
+          "climateImpact": -4,
+          "riskCategory": "Low",
+          "expectedYield": 23.12,
+          "expectedRevenue": 277440,
+          "totalDebt": 121500,
+          "coverageRatio": 2.2834567901234566,
+          "projectedSurplus": 22508,
+          "drivers": [
+            {
+              "label": "Credit history",
+              "detail": "Strong repayment profile",
+              "impact": 14,
+              "direction": "protection"
+            },
+            {
+              "label": "Irrigation resilience",
+              "detail": "Drip irrigation",
+              "impact": 12,
+              "direction": "protection"
+            }
+          ]
+        },
+        "dataSources": [
+          {
+            "name": "Application and financial details",
+            "kind": "observed",
+            "status": "Provided by farmer; officer verification required"
+          },
+          {
+            "name": "Crop duration and price assumptions",
+            "kind": "estimated",
+            "status": "Demo crop library assumption"
+          },
+          {
+            "name": "Weather, soil moisture and crop health",
+            "kind": "synthetic",
+            "status": "Seeded demo indicators; not a satellite observation"
+          },
+          {
+            "name": "Farm coordinates",
+            "kind": "observed",
+            "status": "Provided coordinates; not independently verified"
+          }
+        ],
+        "assumptions": [
+          "Synthetic climate indicators are illustrative and not statistically validated probabilities of default.",
+          "Nearby water resources are not treated as proof of irrigation access.",
+          "Expected revenue uses the seeded crop price library and reported yield."
+        ],
+        "warnings": [
+          "No land or identity document has been uploaded for officer verification."
+        ],
+        "suggestedLoanAmount": 41104,
+        "mapAnalysis": {
+          "status": "synthetic",
+          "nearestResource": "Synthetic village pond marker",
+          "distanceKm": 2.08,
+          "confidence": "low",
+          "freshness": "Seeded demo geospatial data; not a verified map resource"
+        },
+        "timeline": [
+          {
+            "stage": "Sowing",
+            "date": "2026-06-15",
+            "kind": "configured",
+            "detail": "Crop establishment and input purchase"
+          },
+          {
+            "stage": "Vegetative growth",
+            "date": "2026-07-21",
+            "kind": "estimate",
+            "detail": "Crop-progress evidence checkpoint"
+          },
+          {
+            "stage": "Flowering / grain fill",
+            "date": "2026-09-01",
+            "kind": "estimate",
+            "detail": "Irrigation and crop-health checkpoint"
+          },
+          {
+            "stage": "Expected harvest",
+            "date": "2026-10-15",
+            "kind": "configured",
+            "detail": "Expected sale and harvest evidence"
+          },
+          {
+            "stage": "Repayment start",
+            "date": "2026-10-28",
+            "kind": "estimate",
+            "detail": "Harvest-linked repayment schedule begins"
+          }
+        ]
+      },
+      "facilityId": "facility-2320e5b5-8239-46dc-9320-f735f38e1191",
+      "officerNote": "Approved with staged disbursement."
     }
   ]
 }

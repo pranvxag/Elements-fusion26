@@ -38,15 +38,28 @@ function loadGoogleMapLibraries(apiKey: string): Promise<GoogleMapLibraries> {
   return mapLibrariesPromise
 }
 
-export function GoogleFarmMap() {
-  const [lat, setLat] = useState('18.5204')
-  const [lng, setLng] = useState('73.8567')
+type GoogleFarmMapProps = {
+  latitude?: number
+  longitude?: number
+  title?: string
+  subtitle?: string
+  note?: string
+}
+
+export function GoogleFarmMap({ latitude = 18.5204, longitude = 73.8567, title = 'Farm map', subtitle = 'Google Maps satellite view centred on the supplied coordinates.', note }: GoogleFarmMapProps) {
+  const [lat, setLat] = useState(String(latitude))
+  const [lng, setLng] = useState(String(longitude))
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading')
   const [error, setError] = useState('')
   const [libraries, setLibraries] = useState<GoogleMapLibraries | null>(null)
   const mapRef = useRef<HTMLDivElement | null>(null)
   const mapInstance = useRef<google.maps.Map | null>(null)
   const markerInstance = useRef<google.maps.Marker | null>(null)
+
+  useEffect(() => {
+    setLat(String(latitude))
+    setLng(String(longitude))
+  }, [latitude, longitude])
 
   useEffect(() => {
     let disposed = false
@@ -135,8 +148,8 @@ export function GoogleFarmMap() {
       <div className="section-title">
         <div className="icon-box"><CloudRain size={17} /></div>
         <div>
-          <h2>Farm map</h2>
-          <p>Google Maps satellite view centred on the farmer’s actual coordinates.</p>
+          <h2>{title}</h2>
+          <p>{subtitle}</p>
         </div>
       </div>
       <div className="satellite-form">
@@ -148,6 +161,7 @@ export function GoogleFarmMap() {
       </div>
       {status === 'loading' && <div className="demo-alert compact"><AlertTriangle size={16} /><span>Loading Google Maps JavaScript API…</span></div>}
       {error && <div className="demo-alert compact" role="alert"><AlertTriangle size={16} /><span>{error}</span></div>}
+      {note && <div className="demo-alert compact"><AlertTriangle size={16} /><span>{note}</span></div>}
       <div ref={mapRef} className="google-map" />
     </section>
   )

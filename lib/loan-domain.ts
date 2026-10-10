@@ -113,6 +113,35 @@ export type SessionRecord = {
 
 export type LoanApplicationStatus = 'Submitted' | 'Under Review' | 'Approved' | 'Rejected' | 'Documents Required'
 
+export type AssessmentReport = {
+  version: string
+  assessedAt: string
+  assessedBy: string
+  inputSnapshot: Record<string, unknown>
+  result: {
+    repaymentProbability: number
+    riskCategory: 'Low' | 'Moderate' | 'High'
+    expectedYield: number
+    expectedRevenue: number
+    totalDebt: number
+    coverageRatio: number
+    projectedSurplus: number
+    drivers: Array<{ label: string; detail: string; impact: number; direction: 'risk' | 'protection' }>
+  }
+  dataSources: Array<{ name: string; kind: 'observed' | 'external' | 'estimated' | 'synthetic'; status: string }>
+  assumptions: string[]
+  warnings: string[]
+  suggestedLoanAmount: number
+  mapAnalysis?: {
+    status: 'synthetic' | 'unavailable'
+    nearestResource?: string
+    distanceKm?: number
+    confidence: 'low' | 'medium'
+    freshness: string
+  }
+  timeline: Array<{ stage: string; date: string; kind: 'estimate' | 'configured'; detail: string }>
+}
+
 export type LoanApplication = {
   id: string
   reference: string
@@ -132,6 +161,18 @@ export type LoanApplication = {
   existingDebt: number
   creditHistory: string
   purpose: string
+  state?: string
+  taluka?: string
+  sowingDate?: string
+  expectedHarvestDate?: string
+  latitude?: number
+  longitude?: number
+  mapsLink?: string
+  surveyReference?: string
+  cultivatedAreaHa?: number
+  expectedYield?: number
+  repaymentStructure?: 'Monthly' | 'Seasonal' | 'Harvest-linked'
+  assessment?: AssessmentReport
   documents: ApplicationDocument[]
   facilityId?: string
   officerNote?: string
