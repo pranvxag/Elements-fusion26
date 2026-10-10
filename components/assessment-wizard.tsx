@@ -71,11 +71,17 @@ export function AssessmentWizard({ onDone }: { onDone: () => void }) {
 
   const updateRecord = (key: keyof ExtractedRecord, value: string) => setRecord(current => ({ ...current, [key]: value }))
   const runOcr = async () => {
-    if (!landRecordFile || !eightAFile) return
-    if (landRecordFile.type === 'application/pdf' || eightAFile.type === 'application/pdf') {
-      setMessage('PDF OCR is not enabled yet. Please upload image scans (JPG or PNG) for browser OCR.')
+    if (!landRecordFile || !eightAFile) {
+      setMessage('Please upload both 7/12 and 8A scans before running OCR.')
       return
     }
+
+    const unsupportedFiles = [landRecordFile, eightAFile].filter(file => !file.type.startsWith('image/'))
+    if (unsupportedFiles.length > 0) {
+      setMessage('OCR is enabled for JPG and PNG scans. Please upload image files for the browser OCR workflow.')
+      return
+    }
+
     setExtracting(true)
     setMessage('')
     try {

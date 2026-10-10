@@ -27,7 +27,15 @@ pnpm start
 - Climate-adjusted repayment scenario engine with explainable risk drivers.
 - Live portfolio projection API that scores persisted applications with the same risk engine used by the simulator.
 - Loan facilities with configurable crop-cycle tranches and DEMO disbursement states.
-- Synthetic data only: uploads and transactions do not connect to government, banking or payment systems.
+- Synthetic data only: uploads and transactions do not connect to government, banking or payment systems unless explicitly connected through a future production adapter.
+
+### Google Maps and API restrictions
+
+- This project is built with Next.js, so the browser key must be exposed as `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`.
+- The farm map loads the Maps JavaScript API once with `@googlemaps/js-api-loader` and imports the Maps and marker libraries before initialization.
+- The Google Cloud project that owns the key must have the Maps JavaScript API enabled and billing configured.
+- Restrict the key to the Maps JavaScript API and allow the website referrers you use, including `http://localhost:3000/*`, the current Codespaces forwarded-port URL, and your production domain.
+- Put the key in `.env.local`, not source control. Restart the development server after changing environment variables and hard-refresh the browser to clear any previously loaded Maps script.
 
 ## Portals
 
