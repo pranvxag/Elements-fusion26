@@ -48,7 +48,6 @@ const cropPrices: Record<string, number> = {
 }
 
 const clamp = (value: number, minimum: number, maximum: number) => Math.min(maximum, Math.max(minimum, value))
-
 export function calculateRisk(input: RiskInput): RiskResult {
   const price = cropPrices[input.crop] ?? 5000
   const climateStress =

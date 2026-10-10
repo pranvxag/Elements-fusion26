@@ -3,6 +3,8 @@
 .design-cache/
 
 # Environment variables
+.env
+.env.local
 .env*.local
 
 # Common ignores
